@@ -2,8 +2,13 @@
 
 from sys import argv
 
-umbral = int(argv[1])
-umbral2 = argv[2]
+umbral1 = int(argv[1])
+
+# Validacion de ingreso de datos
+if len(argv) == 2:
+    umbral2 = 'mayor'
+else:
+    umbral2 = argv[2]
 
 precios = {'Notebook': 700000,
            'Teclado': 25000,
@@ -22,6 +27,6 @@ def filtrar(diccionario, umbral, umbral2):
         return []
     return nombre
 
-filtro = filtrar(precios, umbral, umbral2)
+filtro = filtrar(precios, umbral1, umbral2)
 
-print(f"Los productos {argv[2]}es al umbral son: {filtro}")
+print(f"Los productos {umbral2}es al umbral son: {filtro}")
