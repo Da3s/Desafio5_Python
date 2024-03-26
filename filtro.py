@@ -24,4 +24,4 @@ def filtrar(diccionario, umbral, umbral2):
 
 filtro = filtrar(precios, umbral, umbral2)
 
-print(f"Los productos {argv[2]} al umbral son: {filtro}")
+print(f"Los productos {argv[2]}es al umbral son: {filtro}")
