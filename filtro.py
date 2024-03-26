@@ -29,4 +29,4 @@ def filtrar(diccionario, umbral, umbral2):
 
 filtro = filtrar(precios, umbral1, umbral2)
 
-print(f"Los productos {umbral2}es al umbral son: {filtro}")
+print(f"Los productos {umbral2}es al umbral son: {', '.join(filtro)}")
