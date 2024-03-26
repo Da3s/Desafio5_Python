@@ -1,23 +1,27 @@
-def factorial(n):
-    if n == 0:
-        return 1
-    else:
-        return n * factorial(n - 1)
+#{}  []
 
+# Calculo factorial
+
+def factorial(numero):
+    valor = 1
+    for n in range(1, numero + 1):
+        valor = valor * n
+    return valor
+    
+    
+# Calculo productoria
 def productoria(lista):
-    result = 1
-    for num in lista:
-        result *= num
-    return result
+    valor = 1
+    for elemento in lista:
+        valor *= elemento
+    return valor
 
-def calcular(**kwargs):
-    for key, value in kwargs.items():
-        if key.startswith('fact_'):
-            num = int(value)
-            print(f"El factorial de {num} es {factorial(num)}")
-        elif key.startswith('prod_'):
-            lista = value
-            print(f"La productoria de {lista} es {productoria(lista)}")
-
-if __name__ == "__main__":
-    calcular(fact_1=5, prod_1=[3, 6, 4, 2, 8], fact_2=6)
+# *Tupla     ** Diccionario
+def calcular(**parametros):
+    for clave, valor in parametros.items():
+        if 'fact' in clave:
+            print(f'El Factorial de {valor} es {factorial(valor)}')
+        else:
+            print(f'La productoria de {valor} es {productoria(valor)}')
+            
+calcular(fact_1 = 5, prod_1 = [3,6,4,2,8], fact_2 = 6)
