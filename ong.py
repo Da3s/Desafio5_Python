@@ -24,4 +24,4 @@ def calcular(**parametros):
         else:
             print(f'La productoria de {valor} es {productoria(valor)}')
             
-calcular(fact_1 = 5, prod_1 = [3,6,4,2,8], fact_2 = 6)
+calcular(fact_1 = 5, prod_1 =  [4, 6, 7, 4, 3], fact_2 = 6)
